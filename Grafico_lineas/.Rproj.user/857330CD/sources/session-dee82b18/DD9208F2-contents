@@ -76,10 +76,11 @@ pension65MinMax2 <- pension65MinMax2 %>%
 pension65MinMax_long <- melt(pension65MinMax2, id = "Date")
 
 ggplot(data=pension65MinMax_long,
-       aes(x=Date, y=value, colour=variable)) +
+       aes(x=Date, y=value, colour=variable), size = 2) +
   geom_line()+
   scale_x_continuous(breaks = seq(2013, 2023, 1))+
   labs(title = "Número de beneficiarios y monto transferido por Pensión 65 (2013-2023)",
+       subtitle = "(Escalamiento MinMax)",
        x='Año',
        y= "Monto/Beneficiarios")+
   theme_clean()

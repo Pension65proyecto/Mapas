@@ -3,7 +3,7 @@
     "path": "/cloud/project/Grafico de lineas pension 65.R",
     "project_path": "Grafico de lineas pension 65.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2267632535",
     "contents": "",
     "dirty": false,
     "created": 1696397412341.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "86,0",
-        "scrollLine": "81"
+        "cursorPosition": "87,0",
+        "scrollLine": "72"
     },
     "folds": "",
-    "lastKnownWriteTime": 1696399701,
+    "lastKnownWriteTime": 1696400239,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1696399701588,
+    "last_content_update": 1696400239775,
     "read_only": false,
     "read_only_alternatives": []
 }
