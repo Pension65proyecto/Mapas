@@ -1,0 +1,158 @@
+---
+title: "GRÁFICO 4 Y 5"
+output: html_document
+date: "2023-10-06"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(dplyr)
+library(ggrepel)
+library(rio)
+library(patchwork)
+```
+
+
+```{r}
+region_prom=import("Datos.xls")
+str(region_prom)
+```
+
+## Scatter de ingresos 2013
+```{r}
+ingreso2013Worst=region_prom %>% top_n(-1, ingreso2013)
+ingreso2013Best=region_prom %>% top_n(1, ingreso2013)
+region_prom$Ingreso_WB2013=c(ingreso2013Worst$Departamento,ingreso2013Best$Departamento)
+```
+
+```{r}
+region_prom$label_ing2013=ifelse(region_prom$Departamento%in%region_prom$Ingreso_WB2013,region_prom$Departamento,"") #con este código se utilizará solo aquellos países mejores y peores
+```
+
+```{r}
+baseScatter_ing2013=ggplot(data=region_prom,aes(x=iddep,
+                                      y=ingreso2013)) + theme_linedraw() 
+scatter_ing2013=baseScatter_ing2013+geom_point(color='grey60',shape = 21)
+```
+
+```{r}
+scatter_ing2013=scatter_ing2013 + geom_text_repel(aes(label=label_ing2013),min.segment.length = 0.05) + theme (text = element_text(size=10)) + labs(title= "2013",x = "Departamentos",y = "Ingreso promedio")
+```
+
+
+```{r fig.height=5, fig.width=8}
+scatter_ing2013
+```
+
+
+
+
+## Scatter de ingresos 2022
+
+```{r}
+ingreso2022Worst=region_prom %>% top_n(-1, ingreso2022)
+ingreso2022Best=region_prom %>% top_n(1, ingreso2022)
+region_prom$Ingreso_WB2022=c(ingreso2022Worst$Departamento,ingreso2022Best$Departamento)
+```
+
+```{r}
+region_prom$label_ing2022=ifelse(region_prom$Departamento%in%region_prom$Ingreso_WB2022,region_prom$Departamento,"") #con este código se utilizará solo aquellos países mejores y peores
+```
+
+```{r}
+baseScatter_ing2022=ggplot(data=region_prom,aes(x=iddep,
+                                      y=ingreso2022)) + theme_linedraw() 
+scatter_ing2022=baseScatter_ing2022+geom_point(color='grey60',shape = 21)
+```
+
+```{r}
+scatter_ing2022=scatter_ing2022 + geom_text_repel(aes(label=label_ing2022),min.segment.length = 0.05) + theme (text = element_text(size=10)) + labs(title = 2022,x = "Departamentos",y = "Ingreso promedio")
+```
+
+```{r fig.height=5, fig.width=8}
+scatter_ing2022
+```
+
+## Unión de los gráficos de ingresos 2013 y 2022
+```{r}
+Scatter_ingresos=wrap_plots(scatter_ing2013, scatter_ing2022, 
+           ncol = 2, nrow = 1,
+           widths = c(8, 8), heights = c(8, 8)) + plot_annotation(title = 'Comparación de regiones con mayor y menor ingreso promedio salarial de personas \n+65 durante los años 2013 y 2022',
+        caption = "Fuente: Elaboración propia")
+Scatter_ingresos
+```
+
+## Scatter de transferencias 2013
+```{r}
+trans2013Worst=region_prom %>% top_n(-1, Transferencia2013)
+trans2013Best=region_prom %>% top_n(1, Transferencia2013)
+region_prom$Trans_WB2013=c(trans2013Worst$Departamento,trans2013Best$Departamento)
+```
+
+```{r}
+region_prom$label_trans2013=ifelse(region_prom$Departamento%in%region_prom$Trans_WB2013,region_prom$Departamento,"") #con este código se utilizará solo aquellos países mejores y peores
+```
+
+```{r}
+baseScatter_trans2013=ggplot(data=region_prom,aes(x=iddep,
+                                      y=Transferencia2013)) + theme_linedraw() 
+scatter_trans2013=baseScatter_trans2013+geom_point(color='grey60',shape = 21)
+```
+
+```{r}
+scatter_trans2013=scatter_trans2013 + geom_text_repel(aes(label=label_trans2013),min.segment.length = 0.05) + theme (text = element_text(size=10)) + labs(title= "2013",x = "Departamentos",y = "Transferencia anual")
+```
+
+
+```{r fig.height=5, fig.width=8}
+scatter_trans2013
+```
+
+## Scatter de transferencias 2022
+```{r}
+trans2022Worst=region_prom %>% top_n(-1, Transferencia2022)
+trans2022Best=region_prom %>% top_n(1, Transferencia2022)
+region_prom$Trans_WB2022=c(trans2022Worst$Departamento,trans2022Best$Departamento)
+```
+
+```{r}
+region_prom$label_trans2022=ifelse(region_prom$Departamento%in%region_prom$Trans_WB2022,region_prom$Departamento,"") #con este código se utilizará solo aquellos países mejores y peores
+```
+
+```{r}
+baseScatter_trans2022=ggplot(data=region_prom,aes(x=iddep,
+                                      y=Transferencia2022)) + theme_linedraw() 
+scatter_trans2022=baseScatter_trans2022+geom_point(color='grey60',shape = 21)
+```
+
+```{r}
+scatter_trans2022=scatter_trans2022 + geom_text_repel(aes(label=label_trans2022),min.segment.length = 0.05) + theme (text = element_text(size=10)) + labs(title= "2022",x = "Departamentos",y = "Transferencia anual")
+```
+
+
+```{r fig.height=5, fig.width=8}
+scatter_trans2022
+```
+
+```{r}
+
+```
+
+## Unión de los gráficos de itransferencias 2013 y 2022
+```{r}
+Scatter_transferencias=wrap_plots(scatter_trans2013, scatter_trans2022, 
+           ncol = 2, nrow = 1,
+           widths = c(8, 8), heights = c(8, 8)) + plot_annotation(title = 'Comparación regional de transferencias anuales durante los años 2013 y 2022',
+        caption = "Fuente: Elaboración propia")
+Scatter_transferencias
+```
+
+## RDS
+```{r}
+saveRDS(Scatter_ingresos, file = "Scatter de Ingresos")
+saveRDS(Scatter_transferencias, file = "Scatter de Transferencias")
+```
+
