@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="weight" attr.type="long"/>
+<graph edgedefault="undirected"><node id="Direccion Ejecutiva MIDIS"/>
+<node id="Direccion General de Gestion de Usuarios MIDIS"/>
+<node id="RENIEC"/>
+<node id="ESSALUD"/>
+<node id="MINSA SIS Centro de salud"/>
+<node id="ONP"/>
+<node id="SBS"/>
+<node id="Sistema bancario"/>
+<node id="Gobierno local"/>
+<node id="Gobierno regional"/>
+<node id="Gobierno nacional"/>
+<node id="Otras instituciones"/>
+<node id="Programas sociales"/>
+<edge source="Direccion Ejecutiva MIDIS" target="Direccion General de Gestion de Usuarios MIDIS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="RENIEC">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="ESSALUD">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="MINSA SIS Centro de salud">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="ONP">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="SBS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Sistema bancario">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Gobierno local">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Gobierno regional">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Gobierno nacional">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Otras instituciones">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Programas sociales">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="RENIEC">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="ESSALUD">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="ONP">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="SBS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="Sistema bancario">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="Gobierno local">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="Otras instituciones">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion General de Gestion de Usuarios MIDIS" target="Programas sociales">
+  <data key="d0">1</data>
+</edge>
+</graph></graphml>

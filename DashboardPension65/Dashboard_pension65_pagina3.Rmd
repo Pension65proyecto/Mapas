@@ -1,0 +1,21 @@
+---
+title: "Dashboard Pensión 65 (tercera página)"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=1000}
+-----------------------------------------------------------------------
+
+```{r picture, echo = F, fig.cap = "Title", out.width = '100%'}
+knitr::include_graphics("Grafico_lineas.png")
+```
+
+
+

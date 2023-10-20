@@ -1,0 +1,74 @@
+---
+title: "Dashboard Pensión 65"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Página 1
+===================================== 
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Monto de transferencias por región durante el año 2013 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choro2013.rds")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Monto de transferencias por región durante el año 2023 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choro2023.rds")
+```
+
+Página 2
+===================================== 
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Grafo de actores involucrados
+
+```{r picture, echo = F, fig.cap = "Title", out.width = '100%'}
+knitr::include_graphics("RedVester.png")
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Relación entre monto transferido e ingreso promedio de adultos mayores por región (2013)
+
+```{r}
+readRDS("scatter2013.rds")
+```
+
+### Relación entre monto transferido e ingreso promedio de adultos mayores por región (2022)
+
+```{r}
+readRDS("scatter2022.rds")
+```
+
+Página 3 
+===================================== 
+
+```{r  out.width = "50%", out.height = "50%"}
+knitr::include_graphics("C:/Users/MEMO 123/Desktop/DashboardPension65/Grafico_lineas.png") 
+```
+
+
+
+
+
+
+
+

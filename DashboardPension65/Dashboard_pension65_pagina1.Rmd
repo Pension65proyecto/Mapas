@@ -1,0 +1,31 @@
+---
+title: "Dashboard Pension 65 (primera página)"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Monto de transferencias por región durante el año 2013 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choro2013.rds")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Monto de transferencias por región durante el año 2023 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choro2023.rds")
+```
+
+
