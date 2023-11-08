@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="weight" attr.type="long"/>
+<graph edgedefault="undirected"><node id="Direccion Ejecutiva MIDIS"/>
+<node id="Unidad de Planeamiento y Presupuesto"/>
+<node id="Unidad de Operaciones MIDIS"/>
+<node id="Unidad de Proyectos y Diseño de Intervenciones"/>
+<node id="Unidad Territorial MIDIS"/>
+<node id="Unidad Central de Focalizacion SISFOH"/>
+<node id="RENIEC"/>
+<node id="ESSALUD SIS MINSA"/>
+<node id="UGEL"/>
+<node id="ONP"/>
+<node id="SBS"/>
+<node id="Gobierno local o municipio"/>
+<node id="Defensoria del Pueblo"/>
+<node id="Banco de la Nacion"/>
+<node id="Poblacion objetivo"/>
+<edge source="Direccion Ejecutiva MIDIS" target="Unidad de Planeamiento y Presupuesto">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Unidad de Operaciones MIDIS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Unidad de Proyectos y Diseño de Intervenciones">
+  <data key="d0">1</data>
+</edge>
+<edge source="Direccion Ejecutiva MIDIS" target="Unidad Territorial MIDIS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="Unidad Territorial MIDIS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="Unidad Central de Focalizacion SISFOH">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="RENIEC">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="ESSALUD SIS MINSA">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="UGEL">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="ONP">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="SBS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Operaciones MIDIS" target="Banco de la Nacion">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Proyectos y Diseño de Intervenciones" target="Unidad Territorial MIDIS">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Proyectos y Diseño de Intervenciones" target="ESSALUD SIS MINSA">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Proyectos y Diseño de Intervenciones" target="UGEL">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad de Proyectos y Diseño de Intervenciones" target="Gobierno local o municipio">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad Territorial MIDIS" target="Unidad Central de Focalizacion SISFOH">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad Territorial MIDIS" target="ESSALUD SIS MINSA">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad Territorial MIDIS" target="Gobierno local o municipio">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad Territorial MIDIS" target="Poblacion objetivo">
+  <data key="d0">1</data>
+</edge>
+<edge source="Unidad Central de Focalizacion SISFOH" target="RENIEC">
+  <data key="d0">1</data>
+</edge>
+<edge source="ESSALUD SIS MINSA" target="Poblacion objetivo">
+  <data key="d0">1</data>
+</edge>
+<edge source="UGEL" target="Poblacion objetivo">
+  <data key="d0">1</data>
+</edge>
+<edge source="Gobierno local o municipio" target="Poblacion objetivo">
+  <data key="d0">1</data>
+</edge>
+<edge source="Defensoria del Pueblo" target="Poblacion objetivo">
+  <data key="d0">1</data>
+</edge>
+<edge source="Banco de la Nacion" target="Poblacion objetivo">
+  <data key="d0">1</data>
+</edge>
+</graph></graphml>
