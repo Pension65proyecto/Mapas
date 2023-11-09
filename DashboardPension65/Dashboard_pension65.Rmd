@@ -13,7 +13,7 @@ library(flexdashboard)
 Página 1
 ===================================== 
 
-Column {data-width=650}
+Column {data-width=433}
 -----------------------------------------------------------------------
 
 ### Monto de transferencias por región durante el año 2013 (de menor [0] a mayor [1])
@@ -22,14 +22,23 @@ Column {data-width=650}
 readRDS("choro2013.rds")
 ```
 
-Column {data-width=650}
+Column {data-width=433}
 -----------------------------------------------------------------------
 
-### Monto de transferencias por región durante el año 2023 (de menor [0] a mayor [1])
+### Monto de transferencias por región durante el año 2022 (de menor [0] a mayor [1])
 
 ```{r}
-readRDS("choro2023.rds")
+readRDS("choro2022.rds")
 ```
+Column {data-width=434}
+-----------------------------------------------------------------------
+
+### Regiones que más aumentaron su recepción de transferencias entre 2013 y 2022 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choroDif.rds")
+```
+
 
 Página 2
 ===================================== 
@@ -40,7 +49,7 @@ Column {data-width=500}
 ### Grafo de actores involucrados
 
 ```{r picture, echo = F, fig.cap = "Title", out.width = '100%'}
-knitr::include_graphics("RedVester.png")
+knitr::include_graphics("RedVesterMejorada.png")
 ```
 
 Column {data-width=500}
@@ -62,7 +71,7 @@ Página 3
 ===================================== 
 
 ```{r  out.width = "50%", out.height = "50%"}
-knitr::include_graphics("Grafico_lineas.png") 
+knitr::include_graphics("Grafico_lineas_Pension65_v2.png") 
 ```
 
 
