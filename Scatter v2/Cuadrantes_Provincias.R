@@ -11,11 +11,11 @@ library(dplyr)
 library(ggplot2)
 
 cuadrantes2022 <- DatosProvincias %>% 
-  mutate(quadrant = case_when(ing_tot_2022_r > x_mid & Transferencia2022_r > y_mid   ~ "Q1",
-                              ing_tot_2022_r <= x_mid & Transferencia2022_r > y_mid  ~ "Q2",
-                              ing_tot_2022_r <= x_mid & Transferencia2022_r <= y_mid ~ "Q3",
-                              TRUE                                         ~ "Q4")) %>% 
-  ggplot(aes(x = ing_tot_2022_r, y = Transferencia2022_r, color = quadrant)) +
+  mutate(cuadrante = case_when(ing_tot_2022_r > x_mid & Transferencia2022_r > y_mid   ~ "Alto-Alto",
+                              ing_tot_2022_r <= x_mid & Transferencia2022_r > y_mid  ~ "Bajo-Alto",
+                              ing_tot_2022_r <= x_mid & Transferencia2022_r <= y_mid ~ "Bajo-Bajo",
+                              TRUE                                         ~ "Alto-Bajo")) %>% 
+  ggplot(aes(x = ing_tot_2022_r, y = Transferencia2022_r, color = cuadrante)) +
   geom_vline(xintercept = x_mid) + # plot vertical line
   geom_hline(yintercept = y_mid) + # plot horizontal line
   geom_point()
@@ -31,11 +31,11 @@ y_mid1 <- median(DatosProvincias$Transferencia2013_r)
 x_mid2 <- median(DatosProvincias$ingtot_2013_r)
 
 cuadrantes2013 <- DatosProvincias %>% 
-  mutate(quadrant = case_when(ingtot_2013_r > x_mid & Transferencia2013_r > y_mid   ~ "Q1",
-                              ingtot_2013_r <= x_mid & Transferencia2013_r > y_mid  ~ "Q2",
-                              ingtot_2013_r <= x_mid & Transferencia2013_r <= y_mid ~ "Q3",
-                              TRUE                                         ~ "Q4")) %>% 
-  ggplot(aes(x = ingtot_2013_r, y = Transferencia2013_r, color = quadrant)) +
+  mutate(cuadrante = case_when(ingtot_2013_r > x_mid & Transferencia2013_r > y_mid   ~ "Alto-Alto",
+                              ingtot_2013_r <= x_mid & Transferencia2013_r > y_mid  ~ "Bajo-Alto",
+                              ingtot_2013_r <= x_mid & Transferencia2013_r <= y_mid ~ "Bajo-Bajo",
+                              TRUE                                         ~ "Alto-Bajo")) %>% 
+  ggplot(aes(x = ingtot_2013_r, y = Transferencia2013_r, color = cuadrante)) +
   geom_vline(xintercept = x_mid) + # plot vertical line
   geom_hline(yintercept = y_mid) + # plot horizontal line
   geom_point()
@@ -46,3 +46,21 @@ cuadrantes2013 <- cuadrantes2013 + labs(x="Ingreso promedio de adultos mayores d
 cuadrantes2013
 
 saveRDS(cuadrantes2013, "cuadrantes2013.rds")
+
+#Creamos variables
+
+##2022
+DatosProvincias <- DatosProvincias %>% 
+  mutate(cuadrante = case_when(ing_tot_2022_r > x_mid & Transferencia2022_r > y_mid   ~ "Alto-Alto",
+                               ing_tot_2022_r <= x_mid & Transferencia2022_r > y_mid  ~ "Bajo-Alto",
+                               ing_tot_2022_r <= x_mid & Transferencia2022_r <= y_mid ~ "Bajo-Bajo",
+                               TRUE                                         ~ "Alto-Bajo"))
+DatosProvincias <- DatosProvincias %>% 
+  rename(cuadrante2022 = cuadrante)
+
+##2013
+DatosProvincias <- DatosProvincias %>% 
+  mutate(cuadrante2013 = case_when(ingtot_2013_r > x_mid & Transferencia2013_r > y_mid   ~ "Alto-Alto",
+                               ingtot_2013_r <= x_mid & Transferencia2013_r > y_mid  ~ "Bajo-Alto",
+                               ingtot_2013_r <= x_mid & Transferencia2013_r <= y_mid ~ "Bajo-Bajo",
+                               TRUE                                         ~ "Alto-Bajo"))
