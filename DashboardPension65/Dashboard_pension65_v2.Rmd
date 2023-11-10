@@ -30,6 +30,7 @@ Column {data-width=650}
 ```{r}
 readRDS("choro2022.rds")
 ```
+
 Página 2
 ================================================================
 
@@ -42,21 +43,18 @@ Column {data-width=650}
 readRDS("choroDif.rds")
 ```
 
-
 Column {data-width=650}
 -----------------------------------------------------------------------
-
 ### Grafo de actores involucrados
 
 ```{r picture, echo = F, fig.cap = "Title", out.width = '100%'}
 knitr::include_graphics("RedVesterMejorada.png")
 ```
-
 Página 3
 ===================================== 
 
-Column {data-width=650}
------------------------------------------------------------------------
+Column
+---------------------------------------------------------
 
 ### Relación entre monto transferido e ingreso promedio de adultos mayores por región (2013)
 
@@ -64,8 +62,8 @@ Column {data-width=650}
 readRDS("cuadrantes2013.rds")
 ```
 
-Column {data-width=650}
------------------------------------------------------------------------
+Column
+------------------------------------------------------------------
 
 ### Relación entre monto transferido e ingreso promedio de adultos mayores por región (2022)
 
@@ -79,11 +77,3 @@ Página 4
 ```{r  out.width = "50%", out.height = "50%"}
 knitr::include_graphics("Grafico_lineas_Pension65_v2.png") 
 ```
-
-
-
-
-
-
-
-
