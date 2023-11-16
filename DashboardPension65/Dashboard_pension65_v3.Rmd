@@ -1,0 +1,79 @@
+---
+title: "Dashboard Pensión 65"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Página 1
+===================================== 
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Monto de transferencias por región durante el año 2013 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choro2013.rds")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Monto de transferencias por región durante el año 2022 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choro2022.rds")
+```
+
+Página 2
+================================================================
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Regiones que más aumentaron su recepción de transferencias entre 2013 y 2022 (de menor [0] a mayor [1])
+
+```{r}
+readRDS("choroDif.rds")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+### Grafo de actores involucrados
+
+```{r picture, echo = F, fig.cap = "Title", out.width = '100%'}
+knitr::include_graphics("RedVesterMejorada.png")
+```
+Página 3
+===================================== 
+
+Column
+---------------------------------------------------------
+
+### Relación entre monto transferido e ingreso promedio de adultos mayores por región (2013)
+
+```{r}
+readRDS("Mapacuadrantes2013.rds")
+```
+
+Column
+------------------------------------------------------------------
+
+### Relación entre monto transferido e ingreso promedio de adultos mayores por región (2022)
+
+```{r}
+readRDS("Mapacuadrantes2022.rds")
+```
+
+Página 4 
+===================================== 
+
+```{r  out.width = "50%", out.height = "50%"}
+knitr::include_graphics("Grafico_lineas_Pension65_v3.png") 
+```

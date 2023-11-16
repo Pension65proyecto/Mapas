@@ -64,3 +64,6 @@ DatosProvincias <- DatosProvincias %>%
                                ingtot_2013_r <= x_mid & Transferencia2013_r > y_mid  ~ "Bajo-Alto",
                                ingtot_2013_r <= x_mid & Transferencia2013_r <= y_mid ~ "Bajo-Bajo",
                                TRUE                                         ~ "Alto-Bajo"))
+
+library(writexl)
+write_xlsx(DatosProvincias, "DatosProvinciasv2.xlsx")
