@@ -61,6 +61,18 @@ class(DepartamentosDif$Total_fj5)
 DepartamentosDif$Total_fj5_cat <- as.factor(DepartamentosDif$Total_fj5)
 class(DepartamentosDif$Total_fj5_cat)
 
+library(tidyverse)
+DepartamentosDif <- mutate(DepartamentosDif, Total_fj5_cat = case_when(
+  Total_fj5_cat == 0 ~ "0 = bajo",
+  Total_fj5_cat == 1 ~ "1 = medio",
+  Total_fj5_cat == 2 ~ "2 = regular",
+  Total_fj5_cat == 3 ~ "3 = alto",
+  Total_fj5_cat == 4 ~ "4 = muy alto",
+  TRUE ~ as.character(Total_fj5_cat)
+))
+
+DepartamentosDif
+
 library(ggplot2)
 baseDif=DepartamentosDif
 
